@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <h1>Search Results For {{ query }}</h1>
+    {% for post in search_list %}
+    <div class="card" style="width: 100%">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.content }}</p>
+      </div>
+    </div>
+    {% endfor %}
+{% endblock content %}
